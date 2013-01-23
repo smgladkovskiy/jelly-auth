@@ -16,8 +16,8 @@ class Model_Auth_Role extends Jelly_Model {
 
 		// Fields defined by the model
 		$meta->fields(array(
-			'id' => Jelly::field('primary'),
-			'name' => Jelly::field('string', array(
+			'id' => Jelly::field('Primary'),
+			'name' => Jelly::field('String', array(
 				'rules' => array(
 					array('not_empty'),
 					array('min_length', array(':value', 4)),
@@ -25,14 +25,14 @@ class Model_Auth_Role extends Jelly_Model {
 				),
 				'unique' => TRUE,
 			)),
-			'description' => Jelly::field('string', array(
+			'description' => Jelly::field('String', array(
 				'rules' => array(
 					array('max_length', array(':value', 255)),
 				),
 			)),
 
 			// Relationships to other models
-		   'users' => Jelly::field('manytomany'),
+		   'users' => Jelly::field('ManyToMany'),
 		));
 	}
 

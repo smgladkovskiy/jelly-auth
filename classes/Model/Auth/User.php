@@ -16,15 +16,15 @@ class Model_Auth_User extends Jelly_Model {
 
 		// Fields defined by the model
 		$meta->fields(array(
-			'id' => Jelly::field('primary'),
-			'email' => Jelly::field('email', array(
+			'id' => Jelly::field('Primary'),
+			'email' => Jelly::field('Email', array(
 				'label' => 'email address',
 				'rules' => array(
 					array('not_empty'),
 				),
 				'unique' => TRUE,
 			)),
-			'username' => Jelly::field('string', array(
+			'username' => Jelly::field('String', array(
 				'label' => 'username',
 				'rules' => array(
 					array('not_empty'),
@@ -32,25 +32,25 @@ class Model_Auth_User extends Jelly_Model {
 				),
 				'unique' => TRUE,
 			)),
-			'password' => Jelly::field('password', array(
+			'password' => Jelly::field('Password', array(
 				'label' => 'password',
 				'rules' => array(
 					array('not_empty'),
 				),
 				'hash_with' => array(Auth::instance(), 'hash'),
 			)),
-			'logins' => Jelly::field('integer', array(
+			'logins' => Jelly::field('Integer', array(
 				'default' => 0,
 				'convert_empty' => TRUE,
 				'empty_value' => 0,
 			)),
-			'last_login' => Jelly::field('timestamp'),
+			'last_login' => Jelly::field('Timestamp'),
 
 			// Relationships to other models
-			'user_tokens' => Jelly::field('hasmany', array(
+			'user_tokens' => Jelly::field('HasMany', array(
 				'foreign' => 'user_token',
 			)),
-			'roles' => Jelly::field('manytomany'),
+			'roles' => Jelly::field('ManyToMany'),
 		));
 	}
 

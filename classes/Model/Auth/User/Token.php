@@ -16,19 +16,19 @@ class Model_Auth_User_Token extends Jelly_Model {
 
 		// Fields defined by the model
 		$meta->fields(array(
-			'id' => Jelly::field('primary'),
-			'user_agent' => Jelly::field('string'),
-			'token' => Jelly::field('string', array(
+			'id' => Jelly::field('Primary'),
+			'user_agent' => Jelly::field('String'),
+			'token' => Jelly::field('String', array(
 				'unique' => TRUE,
 			)),
-			'type' => Jelly::field('string'),
-			'created' => Jelly::field('timestamp', array(
+			'type' => Jelly::field('String'),
+			'created' => Jelly::field('Timestamp', array(
 				'auto_now_create' => TRUE,
 			)),
-			'expires' => Jelly::field('timestamp'),
+			'expires' => Jelly::field('Timestamp'),
 
 			// Relationships to other models
-			'user' => Jelly::field('belongsto'),
+			'user' => Jelly::field('BelongsTo'),
 		));
 	}
 

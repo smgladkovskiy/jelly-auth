@@ -30,6 +30,7 @@ class Model_Auth_User_Token extends Jelly_Model {
 			// Relationships to other models
 			'user' => Jelly::field('BelongsTo'),
 		));
+		$meta->load_with(array('user'));
 	}
 
 	/**

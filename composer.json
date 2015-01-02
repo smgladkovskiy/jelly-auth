@@ -1,0 +1,12 @@
+{
+    "name": "smgladkovskiy/jelly-auth",
+    "description": "Jelly driver for Kohana Auth",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SMGladkovskiy",
+            "email": "smgladkovskiy@gmail.com"
+        }
+    ],
+    "require": {}
+}

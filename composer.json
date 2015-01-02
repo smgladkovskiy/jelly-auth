@@ -2,11 +2,26 @@
     "name": "smgladkovskiy/jelly-auth",
     "description": "Jelly driver for Kohana Auth",
     "license": "MIT",
+    "type": "kohana-module",
     "authors": [
         {
             "name": "SMGladkovskiy",
             "email": "smgladkovskiy@gmail.com"
         }
     ],
-    "require": {}
+    "repositories": [
+        {
+            "url": "https://github.com/smgladkovskiy/jelly.git",
+            "type": "git"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-3.3/develop": "3.3.x-dev",
+            "dev-3.4/develop": "3.4.x-dev"
+        },
+        "installer-paths": {
+            "vendor/{$vendor}/{$name}": ["type:kohana-module"]
+        }
+    }
 }
